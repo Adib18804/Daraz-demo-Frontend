@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daraz Clone - Online Shopping in Bangladesh</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add this line for error page styling -->
+    <link rel="stylesheet" href="error.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-container">
+        <div class="top-links">
+          <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+          <a href="help-support.html"
+            ><i class="fas fa-question-circle"></i> Help & Support</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://lzd-img-global.slatic.net/us/domino/3b870cb043c7f8a9741cbf66329e294e.png"
+              alt="Daraz Logo"
+            />
+          </a>
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Search in Daraz..." />
+          <button><i class="fas fa-search"></i> SEARCH</button>
+        </div>
+
+        <div class="nav-actions">
+          <div class="nav-action">
+            <a href="account.html">
+              <i class="fas fa-user"></i>
+              <span>Account</span>
+            </a>
+          </div>
+          <div class="nav-action">
+            <a href="wishlist.html">
+              <i class="fas fa-heart"></i>
+              <span>Wishlist</span>
+            </a>
+          </div>
+          <div class="nav-action cart-icon">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Cart</span>
+              <div class="cart-count">0</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="banner">
+        <img
+          src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+          alt="Banner"
+        />
+      </div>
+    </div>
+
+    <!-- Flash Sale Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Flash Sale</h2>
+        <div class="timer">
+          <span>00</span>: <span>12</span>: <span>34</span> left
+        </div>
+        <a href="flash-sale.html" class="view-all"
+          >View All <i class="fas fa-chevron-right"></i
+        ></a>
+      </div>
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Smartphone"
+            />
+            <div class="discount-badge">-20%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">
+              Xiaomi Redmi Note 12 Pro 5G (6GB/128GB)
+            </h3>
+            <div class="product-price">
+              <span class="current-price">৳25,999</span>
+              <span class="original-price">৳32,499</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(125)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Headphones"
+            />
+            <div class="discount-badge">-15%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">
+              OnePlus Buds Z2 Bluetooth Wireless Earbuds
+            </h3>
+            <div class="product-price">
+              <span class="current-price">৳4,999</span>
+              <span class="original-price">৳5,899</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-count">(87)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Laptop"
+            />
+            <div class="discount-badge">-10%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">
+              ASUS Vivobook 15 OLED (Core i5 11th Gen)
+            </h3>
+            <div class="product-price">
+              <span class="current-price">৳79,990</span>
+              <span class="original-price">৳88,990</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(42)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Smart Watch"
+            />
+            <div class="discount-badge">-25%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">
+              Amazfit GTS 4 Mini Smart Watch with GPS
+            </h3>
+            <div class="product-price">
+              <span class="current-price">৳8,499</span>
+              <span class="original-price">৳11,499</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(156)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Air Conditioner"
+            />
+            <div class="discount-badge">-12%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Gree 1.5 Ton Inverter Split AC (Gold)</h3>
+            <div class="product-price">
+              <span class="current-price">৳64,990</span>
+              <span class="original-price">৳73,990</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-count">(29)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Shoes"
+            />
+            <div class="discount-badge">-30%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Nike Air Max Running Shoes for Men</h3>
+            <div class="product-price">
+              <span class="current-price">৳6,999</span>
+              <span class="original-price">৳9,999</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(214)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Refrigerator"
+            />
+            <div class="discount-badge">-18%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Walton 320L Frost Free Refrigerator</h3>
+            <div class="product-price">
+              <span class="current-price">৳42,990</span>
+              <span class="original-price">৳52,990</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(37)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://lzd-img-global.slatic.net/g/p/0e3f9f8a9c9e9e9e9e9e9e9e9e9e9e.jpg_220x220q80.jpg"
+              alt="Perfume"
+            />
+            <div class="discount-badge">-22%</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">
+              Davidoff Cool Water Eau de Toilette for Men
+            </h3>
+            <div class="product-price">
+              <span class="current-price">৳3,499</span>
+              <span class="original-price">৳4,499</span>
+            </div>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-count">(178)</span>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">Shop by Categories</h2>
+          <a href="categories.html" class="view-all"
+            >View All <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card">
+            <a href="smartphones.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Smartphones"
+              />
+              <span>Smartphones</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="laptops.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Laptops"
+              />
+              <span>Laptops</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="tvs.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="TVs"
+              />
+              <span>TVs</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="mens-fashion.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Men's Fashion"
+              />
+              <span>Men's Fashion</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="womens-fashion.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Women's Fashion"
+              />
+              <span>Women's Fashion</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="home-appliances.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Home Appliances"
+              />
+              <span>Home Appliances</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="beauty.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Beauty"
+              />
+              <span>Beauty</span>
+            </a>
+          </div>
+          <div class="category-card">
+            <a href="sports-outdoors.html">
+              <img
+                src="https://lzd-img-global.slatic.net/g/ff/kf/S1d0e1e9c5d8a4a4a9e4a7a0b5d5b5b5c_350x350.jpg"
+                alt="Sports & Outdoors"
+              />
+              <span>Sports & Outdoors</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Customer Care</h3>
+          <ul>
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="how-to-buy.html">How to Buy</a></li>
+            <li><a href="returns.html">Return & Refunds</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Daraz</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Get Our App</h3>
+          <div class="download-app">
+            <a href="#">
+              <img
+                src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1bC4aJXXXXXb7XVXXXXXXXXXX-135-40.png"
+                alt="Google Play"
+                class="app-badge"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1aS4aJXXXXXX7XVXXXXXXXXXX-135-40.png"
+                alt="App Store"
+                class="app-badge"
+              />
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-text">
+          © 2025 Daraz Bangladesh. All Rights Reserved.
+        </div>
+        <div class="payment-methods">
+          <img
+            src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1aS4aJXXXXXX7XVXXXXXXXXXX-135-40.png"
+            alt="Visa"
+          />
+          <img
+            src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1aS4aJXXXXXX7XVXXXXXXXXXX-135-40.png"
+            alt="MasterCard"
+          />
+          <img
+            src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1aS4aJXXXXXX7XVXXXXXXXXXX-135-40.png"
+            alt="bKash"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
